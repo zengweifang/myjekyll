@@ -4,3 +4,16 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+<!-- lang: html -->
+
+---
+title: My Blog
+---
+
+{{page.title}}
+
+{% for post in site.posts %}
+
+{{ post.date|date_to_string }} <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+
+{% endfor %}
